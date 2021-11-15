@@ -94,4 +94,20 @@ public class Reservation {
     public double getTotalCost(){
         return totalCost;
     }
+        //Cancel Reservation Method
+    public ArrayList<Reservation> cancelReservation(int reservationNumber, LocalDateTime time){
+        for (int i = 0; i < reservations.size(); i++){
+            if(checkIn.minusDays(2) == time) {
+                if (this.reservationNumber == reservationNumber) {
+                    reservations.remove(i);
+                }
+            } else {
+                if (this.reservationNumber == reservationNumber){
+                    reservations.remove(i);
+                    setTotalCost(0);
+                }
+            }
+        }
+        return reservations;
+    }
 }

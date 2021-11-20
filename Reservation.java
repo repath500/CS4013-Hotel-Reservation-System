@@ -110,4 +110,11 @@ public class Reservation {
         }
         return reservations;
     }
+    //ToString Method for formatting the reservations to text
+       public String toString() {
+        return "Reservation Number : " + reservationNumber + "\nReservation Name : " + reservationName +
+                "\nReservation Type : " + reservationType + "\nCheck In : " + checkIn + "\nCheck Out : " +
+                checkOut + "\nNumber of Rooms : " + numberRooms + "\nRoom Type : " + roomType +
+                "\nOccupancy : " + occupancy + "\nTotal Cost : " + totalCost;
+    }
 }

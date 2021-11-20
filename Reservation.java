@@ -95,7 +95,8 @@ public class Reservation {
         return totalCost;
     }
         //Cancel Reservation Method
-    public ArrayList<Reservation> cancelReservation(int reservationNumber, LocalDateTime time){
+    public ArrayList<Reservation> cancelReservation(int reservationNumber){
+        LocalDateTime time = LocalDateTime.now();
         for (int i = 0; i < reservations.size(); i++){
             if(checkIn.minusDays(2) == time) {
                 if (this.reservationNumber == reservationNumber) {

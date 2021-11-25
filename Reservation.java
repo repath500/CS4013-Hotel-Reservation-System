@@ -1,5 +1,9 @@
 import java.time.LocalDateTime;
 
+/**The Following code was authored by
+ * @20251874, Farran Haley.
+ */
+
 public class Reservation {
     private int reservationNumber;
     private String reservationName;

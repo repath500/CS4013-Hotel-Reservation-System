@@ -10,6 +10,7 @@ public class Reservation {
     private String roomType;
     private int occupancy;
     private double totalCost;
+    private ArrayList<Reservation> reservations;
 
     public Reservation(){
         reservationNumber = 000000000;

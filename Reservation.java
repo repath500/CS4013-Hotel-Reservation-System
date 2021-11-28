@@ -123,4 +123,18 @@ public class Reservation {
                 checkOut + "\nNumber of Rooms : " + numberRooms + "\nRoom Type : " + roomType +
                 "\nOccupancy : " + occupancy + "\nTotal Cost : " + totalCost;
     }
+    
+        //Reservation Checker
+    public String reservationChecker(LocalDateTime date){
+        for (int i = 0; i < reservations.size(); i++){
+            if (date == checkIn){
+                return "Room Unavailable";
+            } else if (date == checkOut){
+                return "Room Unavailable";
+            } else if (date.isAfter(checkIn) && date.isBefore(checkOut)){
+                return "Room Unavailable";
+            }
+        }
+        return "Room Available";
+    }
 }

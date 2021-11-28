@@ -140,17 +140,20 @@ public class Reservation {
                 "\nOccupancy : " + occupancy + "\nTotal Cost : " + totalCost;
     }
     
-        //Reservation Checker
+    //Reservation Checker
     public String reservationChecker(LocalDateTime date){
+        String result = "Null";
         for (int i = 0; i < reservations.size(); i++){
             if (date == checkIn){
-                return "Room Unavailable";
+                result = "Unavailable";
             } else if (date == checkOut){
-                return "Room Unavailable";
+                result = "Room Unavailable";
             } else if (date.isAfter(checkIn) && date.isBefore(checkOut)){
-                return "Room Unavailable";
+                result = "Room Unavailable";
+            } else {
+                result = "Room Available";
             }
         }
-        return "Room Available";
+        return result;
     }
 }

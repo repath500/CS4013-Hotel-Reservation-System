@@ -30,4 +30,21 @@ public class Calculator extends Reservation {
             return totalCost;
         }
     }
+    
+    //Cancellation Calculator
+    public double cancellationCost(LocalDateTime date){
+        double cost;
+        if (reservationType == "AP"){
+            cost = totalCost;
+            return cost;
+        } else if (reservationType == "S"){
+            if (date.isBefore(checkIn.minusHours(48))){
+                return 0;
+            } else if (date.isAfter(checkIn.minusHours(48))){
+                cost = totalCost;
+                return cost;
+            }
+        }
+        return 0;
+    }
 }

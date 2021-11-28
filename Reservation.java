@@ -27,6 +27,22 @@ public class Reservation {
         occupancy = 4;
         totalCost = 100;
     }
+    
+    //Constructor
+    public Reservation(String name, String reservationType, LocalDateTime checkIn, LocalDateTime checkOut,
+                       int numberRooms, String roomType, int occupancy, int totalCost){
+        // First we must create a random reservation number
+        this.reservationNumber = (int) (Math.random() * 100000);
+        this.reservationName = name;
+        this.reservationType = reservationType;
+        this.checkIn = checkIn;
+        this.checkOut = checkOut;
+        this.numberRooms = numberRooms;
+        this.roomType = roomType;
+        this.occupancy = occupancy;
+        this.totalCost = totalCost;
+
+    }
     //Mutators
     public void setReservationNumber(int number){
         this.reservationNumber = number;

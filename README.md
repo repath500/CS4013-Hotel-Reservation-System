@@ -1,5 +1,5 @@
 # CS4013-Hotel-Reservation-System
-=================================
+
 Please ensure that the HotelReservation file is stored in a user file before starting.
 
 1. To run this system from the command line, open the command prompt.

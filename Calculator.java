@@ -2,6 +2,9 @@ import java.util.ArrayList;
 
 public class Calculator extends Reservation {
     private String reservationType;
+    //totalCost and checkIn are private access in the Reservation.
+    private int totalCost;
+    private LocalDateTime checkIn;
 
     public Calculator(){
         reservationType = "S";

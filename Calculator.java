@@ -27,7 +27,7 @@ public class Calculator extends Reservation {
         } else if (reservationType == "AP"){
             double temp;
             temp = totalCost;
-            double discountedPrice = ((temp * 100) / 95);
+            double discountedPrice = ((temp * 95) / 100);
             //double discountedPrice = (temp * (5 / 100));
             // (5 / 100) will return 0, temp * 0 will get 0.
             return discountedPrice;
